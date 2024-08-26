@@ -18,7 +18,7 @@ const PageBody: React.FC<ContainerProps> = ({ children }) => {
 }
 
 const PageSection: React.FC<ContainerProps> = ({ children }) => {
-  return <div className="flex flex-col gap-4">{children}</div>
+  return <div className="flex flex-col gap-6">{children}</div>
 }
 
 const SectionTitle: React.FC<ContainerProps> = ({ children }) => {
