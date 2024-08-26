@@ -7,7 +7,7 @@ const PageContainer: React.FC<ContainerProps> = ({ children }) => {
 
 const PageTitle: React.FC<PageTitleProps> = ({ children }) => {
   return (
-    <div className="border-b p-6 text-sm font-mono flex justify-center">
+    <div className="border-b p-5 text-sm font-mono flex justify-center">
       {children}
     </div>
   )
