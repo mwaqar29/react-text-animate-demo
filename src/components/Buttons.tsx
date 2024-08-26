@@ -8,7 +8,7 @@ const PlayButton: React.FC<PlayButtonProps> = ({ onClick }) => {
     <div className="flex justify-center">
       <button
         onClick={onClick}
-        className="text-xs border border-transparent transition tracking-wider px-2 py-1 w-fit"
+        className="play-button text-xs transition tracking-wider px-2 py-1 w-fit"
       >
         <span className="mr-1">▶</span> PLAY
       </button>
@@ -25,7 +25,7 @@ const BackButton = () => {
       {location.pathname !== '/' && (
         <button
           onClick={() => navigate('/')}
-          className="border fixed ml-4 p-3 z-1"
+          className="back-button border fixed ml-4 p-3 z-1"
         >
           <LiaLongArrowAltLeftSolid size="44" />
         </button>
