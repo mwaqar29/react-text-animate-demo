@@ -6,4 +6,4 @@ This is a demo app for the `react-text-animate` npm package.
 
 #### [Github Link](https://github.com/mwaqar29/react-text-animate/)
 
-#### [Codesandbox Link](https://codesandbox.io/p/sandbox/old-react-text-animate-demo-4mrhxr)
+#### [Codesandbox Link](https://codesandbox.io/p/sandbox/react-text-animate-demo-4mrhxr)
