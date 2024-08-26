@@ -25,9 +25,9 @@ const BackButton = () => {
       {location.pathname !== '/' && (
         <button
           onClick={() => navigate('/')}
-          className="border fixed ml-4 p-6 z-1"
+          className="border fixed ml-4 p-3 z-1"
         >
-          <LiaLongArrowAltLeftSolid size="20" />
+          <LiaLongArrowAltLeftSolid size="44" />
         </button>
       )}
     </>
