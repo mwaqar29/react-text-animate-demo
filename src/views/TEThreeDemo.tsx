@@ -18,7 +18,6 @@ const TEThreeDemo = () => {
         <PageSection>
           <SectionTitle>Default</SectionTitle>
           <TextEffectThree
-            lineHeight={0.81}
             className="text-2xl md:text-4xl lg:text-6xl uppercase"
             text={words[12]}
           />
@@ -26,7 +25,6 @@ const TEThreeDemo = () => {
         <PageSection>
           <SectionTitle>Start from the Top</SectionTitle>
           <TextEffectThree
-            lineHeight={0.81}
             className="text-2xl md:text-4xl lg:text-6xl uppercase"
             text={words[13]}
             fromTop
@@ -35,7 +33,6 @@ const TEThreeDemo = () => {
         <PageSection>
           <SectionTitle>Start from the Right</SectionTitle>
           <TextEffectThree
-            lineHeight={0.81}
             className="text-2xl md:text-4xl lg:text-6xl uppercase"
             text={words[14]}
             fromLast
@@ -44,7 +41,6 @@ const TEThreeDemo = () => {
         <PageSection>
           <SectionTitle>Start from the Top-Right</SectionTitle>
           <TextEffectThree
-            lineHeight={0.81}
             className="text-2xl md:text-4xl lg:text-6xl uppercase"
             text={words[15]}
             fromTop
@@ -54,7 +50,6 @@ const TEThreeDemo = () => {
         <PageSection>
           <SectionTitle>Stagger Duration (Increased to 0.06s)</SectionTitle>
           <TextEffectThree
-            lineHeight={0.81}
             className="text-2xl md:text-4xl lg:text-6xl uppercase"
             text={words[16]}
             staggerDuration={0.06}
@@ -63,7 +58,6 @@ const TEThreeDemo = () => {
         <PageSection>
           <SectionTitle>Animation Duration (Decreased to 0.1s)</SectionTitle>
           <TextEffectThree
-            lineHeight={0.81}
             className="text-2xl md:text-4xl lg:text-6xl uppercase"
             text={words[17]}
             animationDuration={0.1}
