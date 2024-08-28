@@ -72,60 +72,71 @@ const TEOneDemo = () => {
           <PlayButton onClick={() => playAnimation(3)} />
         </PageSection>
         <PageSection>
-          <SectionTitle>Start from the Top</SectionTitle>
+          <SectionTitle>Stagger Duration (Decreased to 0s)</SectionTitle>
           <TextEffectOne
             animateOnce
             key={animationKeys[4]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
             text={words[8]}
-            fromTop
+            staggerDuration={0}
           />
           <PlayButton onClick={() => playAnimation(4)} />
         </PageSection>
         <PageSection>
-          <SectionTitle>Start from the Right</SectionTitle>
+          <SectionTitle>Start from the Top</SectionTitle>
           <TextEffectOne
             animateOnce
             key={animationKeys[5]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
             text={words[9]}
-            fromLast
+            fromTop
           />
           <PlayButton onClick={() => playAnimation(5)} />
         </PageSection>
         <PageSection>
-          <SectionTitle>Start from the Top-Right</SectionTitle>
+          <SectionTitle>Start from the Right</SectionTitle>
           <TextEffectOne
             animateOnce
             key={animationKeys[6]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
             text={words[10]}
-            fromTop
             fromLast
           />
           <PlayButton onClick={() => playAnimation(6)} />
         </PageSection>
         <PageSection>
-          <SectionTitle>Start Delayed (by 3s)</SectionTitle>
+          <SectionTitle>Start from the Top-Right</SectionTitle>
           <TextEffectOne
             animateOnce
             key={animationKeys[7]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
             text={words[11]}
-            initialDelay={3}
+            fromTop
+            fromLast
           />
           <PlayButton onClick={() => playAnimation(7)} />
+        </PageSection>
+        <PageSection>
+          <SectionTitle>Start Delayed (by 3s)</SectionTitle>
+          <TextEffectOne
+            animateOnce
+            key={animationKeys[8]}
+            className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
+            text={words[12]}
+            initialDelay={3}
+          />
+          <PlayButton onClick={() => playAnimation(8)} />
         </PageSection>
         <PageSection>
           <SectionTitle>
             Always play the animation when element enters viewport
           </SectionTitle>
           <TextEffectOne
-            key={animationKeys[8]}
+            key={animationKeys[9]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[12]}
+            text={words[13]}
           />
-          <PlayButton onClick={() => playAnimation(8)} />
+          <PlayButton onClick={() => playAnimation(9)} />
         </PageSection>
       </PageBody>
     </PageContainer>
