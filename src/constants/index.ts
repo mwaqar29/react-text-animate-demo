@@ -2,6 +2,7 @@ import {
   TextEffectOne,
   TextEffectThree,
   TextEffectTwo,
+  TextEffectFour,
 } from 'react-text-animate'
 
 const components = [
@@ -26,6 +27,12 @@ const components = [
     text: 'HOVER ME!',
     hidePlay: true,
   },
+  {
+    name: TextEffectFour,
+    snippet: '<TextEffectFour />',
+    href: '/4',
+    text: 'Watch as each character appears one by one!',
+  },
 ]
 
 const words = [
@@ -48,7 +55,7 @@ const words = [
   'Ethereal',
   'Splendid',
   'Breathtaking',
-  'Vivid',
+  'Impressive',
   'Tranquil',
   'Divine',
   'Opulent',
@@ -60,12 +67,15 @@ const words = [
   'Flawless',
   'Refined',
   'Heavenly',
-  'Rich',
+  'Authentic',
   'Marvelous',
   'Delightful',
   'Superb',
   'Ravishing',
   'Bewitching',
+  'Authentic',
+  'Evocative',
+  'Mystic',
 ]
 
 const sentences = [

@@ -10,4 +10,4 @@ interface PlayButtonProps {
   onClick: () => void
 }
 
-export { ContainerProps, PageTitleProps, PlayButtonProps }
+export type { ContainerProps, PageTitleProps, PlayButtonProps }

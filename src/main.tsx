@@ -8,6 +8,7 @@ import Preview from './views/Preview'
 import TEOneDemo from './views/TEOneDemo'
 import TETwoDemo from './views/TETwoDemo'
 import TEThreeDemo from './views/TEThreeDemo'
+import TEFourDemo from './views/TEFourDemo.tsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: '3',
         element: <TEThreeDemo />,
+      },
+      {
+        path: '4',
+        element: <TEFourDemo />,
       },
     ],
   },
