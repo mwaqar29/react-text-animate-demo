@@ -8,14 +8,14 @@ import {
   SectionTitle,
 } from '../components/Containers'
 import { PlayButton } from '../components/Buttons'
-import { words } from '../constants'
+import { useTextGenerator } from '../hooks/useTextGenerator'
 
 const TEOneDemo = () => {
   const COMPONENT_NAME = `<TextEffectOne />`
-  const textMultiline = [words[3], words[4], words[5]]
 
-  const initializeKeys = () => Array(10).fill(0)
+  const initializeKeys = () => Array(15).fill(0)
   const [animationKeys, setAnimationKeys] = useState(initializeKeys)
+  const { getNextWord } = useTextGenerator()
 
   const playAnimation = (idx: number) => {
     setAnimationKeys((prevKeys) => {
@@ -35,7 +35,7 @@ const TEOneDemo = () => {
             animateOnce
             key={animationKeys[0]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider uppercase"
-            text={words.slice(0, 3).join(' ')}
+            text={`${getNextWord()} ${getNextWord()} ${getNextWord()}`}
           />
           <PlayButton onClick={() => playAnimation(0)} />
         </PageSection>
@@ -45,7 +45,7 @@ const TEOneDemo = () => {
             animateOnce
             key={animationKeys[1]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={textMultiline}
+            text={[getNextWord(), getNextWord(), getNextWord()]}
           />
           <PlayButton onClick={() => playAnimation(1)} />
         </PageSection>
@@ -55,7 +55,7 @@ const TEOneDemo = () => {
             animateOnce
             key={animationKeys[2]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[6]}
+            text={getNextWord()}
             rotation={67.5}
           />
           <PlayButton onClick={() => playAnimation(2)} />
@@ -66,7 +66,7 @@ const TEOneDemo = () => {
             animateOnce
             key={animationKeys[3]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[7]}
+            text={getNextWord()}
             staggerDuration={0.3}
           />
           <PlayButton onClick={() => playAnimation(3)} />
@@ -77,7 +77,7 @@ const TEOneDemo = () => {
             animateOnce
             key={animationKeys[4]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[8]}
+            text={getNextWord()}
             staggerDuration={0}
           />
           <PlayButton onClick={() => playAnimation(4)} />
@@ -88,7 +88,7 @@ const TEOneDemo = () => {
             animateOnce
             key={animationKeys[5]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[9]}
+            text={getNextWord()}
             fromTop
           />
           <PlayButton onClick={() => playAnimation(5)} />
@@ -99,7 +99,7 @@ const TEOneDemo = () => {
             animateOnce
             key={animationKeys[6]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[10]}
+            text={getNextWord()}
             fromLast
           />
           <PlayButton onClick={() => playAnimation(6)} />
@@ -110,33 +110,55 @@ const TEOneDemo = () => {
             animateOnce
             key={animationKeys[7]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[11]}
+            text={getNextWord()}
             fromTop
             fromLast
           />
           <PlayButton onClick={() => playAnimation(7)} />
         </PageSection>
         <PageSection>
-          <SectionTitle>Start Delayed (by 3s)</SectionTitle>
+          <SectionTitle>Animate Word-by-word</SectionTitle>
           <TextEffectOne
             animateOnce
             key={animationKeys[8]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[12]}
-            initialDelay={3}
+            text={`${getNextWord()} ${getNextWord()} ${getNextWord()}`}
+            staggerDuration={0.35}
+            wordByWord
           />
           <PlayButton onClick={() => playAnimation(8)} />
+        </PageSection>
+        <PageSection>
+          <SectionTitle>Emojis (because, they are cool! 😎)</SectionTitle>
+          <TextEffectOne
+            animateOnce
+            key={animationKeys[9]}
+            className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
+            text={getNextWord() + '💎🌟✨'}
+          />
+          <PlayButton onClick={() => playAnimation(9)} />
+        </PageSection>
+        <PageSection>
+          <SectionTitle>Start Delayed (by 3s)</SectionTitle>
+          <TextEffectOne
+            animateOnce
+            key={animationKeys[10]}
+            className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
+            text={getNextWord()}
+            initialDelay={3}
+          />
+          <PlayButton onClick={() => playAnimation(10)} />
         </PageSection>
         <PageSection>
           <SectionTitle>
             Always play the animation when element enters viewport
           </SectionTitle>
           <TextEffectOne
-            key={animationKeys[9]}
+            key={animationKeys[11]}
             className="text-2xl md:text-4xl lg:text-6xl tracking-wider"
-            text={words[13]}
+            text={getNextWord()}
           />
-          <PlayButton onClick={() => playAnimation(9)} />
+          <PlayButton onClick={() => playAnimation(11)} />
         </PageSection>
       </PageBody>
     </PageContainer>

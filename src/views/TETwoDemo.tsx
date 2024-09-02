@@ -8,13 +8,14 @@ import {
   SectionTitle,
 } from '../components/Containers'
 import { PlayButton } from '../components/Buttons'
-import { sentences } from '../constants'
+import { useTextGenerator } from '../hooks/useTextGenerator'
 
 const TETwoDemo = () => {
   const COMPONENT_NAME = `<TextEffectTwo />`
 
   const initializeKeys = () => Array(10).fill(0)
   const [animationKeys, setAnimationKeys] = useState(initializeKeys)
+  const { getNextSentence } = useTextGenerator()
 
   const playAnimation = (idx: number) => {
     setAnimationKeys((prevKeys) => {
@@ -34,7 +35,7 @@ const TETwoDemo = () => {
             animateOnce
             key={animationKeys[0]}
             className="text-xl md:text-2xl lg:text-4xl"
-            text={sentences[0]}
+            text={getNextSentence()}
           />
           <PlayButton onClick={() => playAnimation(0)} />
         </PageSection>
@@ -44,7 +45,7 @@ const TETwoDemo = () => {
             animateOnce
             key={animationKeys[1]}
             className="text-xl md:text-2xl lg:text-4xl"
-            text={sentences[1]}
+            text={getNextSentence()}
             filter={false}
           />
           <PlayButton onClick={() => playAnimation(1)} />
@@ -55,7 +56,7 @@ const TETwoDemo = () => {
             animateOnce
             key={animationKeys[2]}
             className="text-xl md:text-2xl lg:text-4xl"
-            text={sentences[2]}
+            text={getNextSentence()}
             animationDuration={2}
           />
           <PlayButton onClick={() => playAnimation(2)} />
@@ -66,7 +67,7 @@ const TETwoDemo = () => {
             animateOnce
             key={animationKeys[3]}
             className="text-xl md:text-2xl lg:text-4xl"
-            text={sentences[3]}
+            text={getNextSentence()}
             staggerDuration={0.5}
           />
           <PlayButton onClick={() => playAnimation(3)} />
@@ -77,7 +78,7 @@ const TETwoDemo = () => {
             animateOnce
             key={animationKeys[4]}
             className="text-xl md:text-2xl lg:text-4xl"
-            text={sentences[4]}
+            text={getNextSentence()}
             initialDelay={3}
           />
           <PlayButton onClick={() => playAnimation(4)} />
@@ -89,7 +90,7 @@ const TETwoDemo = () => {
           <TextEffectTwo
             key={animationKeys[5]}
             className="text-xl md:text-2xl lg:text-4xl"
-            text={sentences[5]}
+            text={getNextSentence()}
           />
           <PlayButton onClick={() => playAnimation(5)} />
         </PageSection>
