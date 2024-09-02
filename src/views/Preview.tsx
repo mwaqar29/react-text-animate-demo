@@ -42,7 +42,7 @@ const Preview = () => {
               onClick={() => navigate(component.href, {})}
               className="text-xs hover:translate-x-1 hover:transition transition tracking-wider flex items-center gap-2 mr-auto"
             >
-              DETAILS <RxHamburgerMenu />
+              VIEW VARIATIONS <RxHamburgerMenu />
             </button>
             <div className="text-xl md:text-2xl lg:text-4xl">
               {idx + 1 > 9 ? idx + 1 : '0' + (idx + 1)}
